@@ -66,6 +66,10 @@ h1{
     margin: 9px 0px;
 }
 
+.bnt-report{
+    margin:18px 0px;
+}
+
 
 @media (max-width: 650px) {
     .container-pulsanti{
