@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/fire.png" type="image/.png">
+    <title>A.I.B. Massa di Somma</title>
+    
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Add script to the <head> of your page to load the embeddable map component -->
+    <script type="module" src="https://js.arcgis.com/embeddable-components/4.33/arcgis-embeddable-components.esm.js"></script>
+
+</head>
+
+
+
+<body>
+    <div class="title-dash">
+        <img class="image-fire" src="img/fire.png" alt="">
+        <h1>Dashboard AIB Operatore</h1>
+
+    </div>
+
+
+
+    <div class="container-pulsanti">
+        <a href="tel:+39800232525">
+            <button class="btn"><img class="immagine" src="img/tel.png" alt="">SORU</button>
+        </a>
+        <a href="tel:+39112">
+            <button class="btn"><img class="immagine" src="img/tel.png" alt=""> 112</button>
+        </a>
+        <a href="tel:+390811010315">
+            <button class="btn"><img class="immagine" src="img/tel.png" alt=""> S.O. Vesuvius</button>
+        </a>
+        <a href="tel:+390817967762">
+            <button class="btn"><img class="immagine" src="img/tel.png" alt=""> SOPI Napoli</button>
+        </a>
+    </div>
+
+
+    <div class="container">
+     
+        <arcgis-embedded-map id="mappa" style="height:80vh;width:100%;" item-id="76d8f03e9c544e53b87a9b7ebed28f90" theme="light" bookmarks-enabled heading-enabled legend-enabled information-enabled center="14.316876028481188,40.833319189573274"scale="577790.554289" portal-url="https://www.arcgis.com" ></arcgis-embedded-map>
+    </div>
+       
+
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
