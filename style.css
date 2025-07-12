@@ -79,6 +79,10 @@ h1{
     
 }
 
+button.btn.report{
+    background-color:#77DD77;
+}
+
 
 @media (max-width: 650px) {
     .container-pulsanti, .bnt-report{
