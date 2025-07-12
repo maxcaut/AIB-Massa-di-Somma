@@ -80,7 +80,7 @@ h1{
 
 
 @media (max-width: 650px) {
-    .container-pulsanti{
+    .container-pulsanti, .bnt-report{
         max-width: 90vw;
         display:block;
         margin: 0 auto;
