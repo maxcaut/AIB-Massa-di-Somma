@@ -67,7 +67,15 @@ h1{
 }
 
 .bnt-report{
-    margin:18px 0px;
+
+    display: flex;
+    justify-content: center;
+    
+    margin: 9px 0px;
+    
+    align-items: center;
+    min-height: 10vh;
+    
 }
 
 
