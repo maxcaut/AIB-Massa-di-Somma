@@ -61,7 +61,7 @@ img.immagine{
 
 a{
     text-decoration: none;
-    width: calc(50%-4px);
+   
 }
 
 h1{
@@ -88,7 +88,8 @@ button.btn.report{
 
 @media (max-width: 650px) {
     .container-pulsanti, .bnt-report{
-        max-width: 90vw;
+        
+        width: calc(50%-4px);
         display:block;
         margin: 0 auto;
         margin-bottom: 18px;
