@@ -56,11 +56,12 @@ img.immagine{
     display: flex;
     align-items: center;
     gap: 8px;
-    width: calc(50%-4px);
+    
 }
 
 a{
     text-decoration: none;
+    width: calc(50%-4px);
 }
 
 h1{
