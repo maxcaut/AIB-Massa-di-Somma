@@ -90,7 +90,8 @@ button.btn.report{
     .container-pulsanti, .bnt-report{
         
         width: calc(50%-4px);
-        display:block;
+        display:flex;
+        gap:8px;
         margin: 0 auto;
         margin-bottom: 18px;
     }
