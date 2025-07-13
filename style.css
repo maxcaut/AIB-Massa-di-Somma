@@ -88,10 +88,8 @@ button.btn.report{
 
 @media (max-width: 650px) {
     .container-pulsanti, .bnt-report{
-        
-        width: calc(50%-4px);
-        display:flex;
-        gap:8px;
+          max-width: 90vw;
+        display:block;
         margin: 0 auto;
         margin-bottom: 18px;
     }
