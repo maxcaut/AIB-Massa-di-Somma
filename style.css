@@ -1,0 +1,142 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(#60a2ff, #94c1ff);
+    min-height: 100vh;
+}
+
+.image-fire{
+    height: 50px;
+    margin:9px;
+
+}
+
+.container-pulsanti{
+    display: flex;
+    justify-content: center;
+    gap: 9px;
+    margin: 9px 0px;
+    
+    align-items: center;
+    min-height: 10vh;
+   
+}
+
+
+button{
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 18px;
+    border: none;
+    background-color: #ff4d4d;
+    text-decoration: none;
+    color: white;
+}
+
+.title-dash{
+    display: flex;
+    justify-content: center;
+    
+    color: white;
+    margin-top: 9px;
+    align-items: center;
+}
+
+img.immagine{
+    height: 25px;
+    
+}
+
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1{
+    line-height: 35px;
+}
+
+
+.container-login{
+    max-width: 400px;
+    border: 3px solid red;
+    margin: 0 auto;
+    text-align: center;
+    display:block;
+    width: 100%;
+    align-items: center;
+    margin-top: calc(50vh - 20 px);
+
+}
+
+.container-login input{
+    display: flex;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    padding: 18px 27px;
+    border-radius: 18px;
+    border: none;
+    width: 90%;
+    margin-top: 9px;
+
+      
+}
+
+.container-login label{
+    font-size: 25px;
+    
+}
+
+
+
+
+#Accedi-btn{
+    width: 90%;
+    background-color: #60a2ff ;
+    margin-top: 9px;
+
+}
+
+.logo-aib img{
+    display: flex;
+    border-radius: 50%;
+    background-color: white;
+    margin:0 auto;
+    margin-bottom: 30px;
+}
+
+.container-login h1{
+    margin-bottom: 18px;
+}
+
+
+@media (max-width: 650px) {
+    .container-pulsanti{
+        max-width: 90vw;
+        display:block;
+        margin: 0 auto;
+        margin-bottom: 18px;
+    }
+
+    button{
+        margin: 0 auto;
+        margin-bottom: 5px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .title-dash{
+        margin-bottom: 9px;
+        text-align: center;
+        
+    }
+}
