@@ -1,36 +1,34 @@
 const username = document.querySelector('#username');
-const password =document.querySelector('#password');
+const password = document.querySelector('#password');
 const accedi = document.querySelector('#Accedi-btn');
 
-const userSite = 'aibmassa'
-const passSite = 'AIB789'
-
-
 accedi.addEventListener('click', verificaUtente);
-
+document.addEventListener('keydown', checkEnter);
 
 function checkEnter(event) {
-    if (event.keyCode === 13) {
-      verificaUtente();
+  if (event.key === "Enter") {
+    verificaUtente();
+  }
+}
+
+async function verificaUtente() {
+  try {
+    const response = await fetch('utenti.json');
+    const utenti = await response.json();
+
+    const utenteValido = utenti.find(u =>
+      u.username === username.value && u.password === password.value
+    );
+
+    if (utenteValido) {
+      sessionStorage.setItem('stats', 1);
+      window.location.href = '/dash.html';
+    } else {
+      alert("Username o Password Errati");
+      location.reload();
     }
+  } catch (err) {
+    console.error("Errore nel caricamento utenti.json", err);
+    alert("Errore interno");
   }
-
-
-function verificaUtente(){
-
-  if (username.value === userSite && password.value === passSite) {
-    sessionStorage.setItem('stats', 1);
-    window.location.href = '/dash.html';
-  
-  }
-  else{
-    alert("Username o Password Errati");
-    location.reload();
-    
-  }
-
-};
-
-
-
-
+}
