@@ -6,10 +6,17 @@ const userSite = 'aibmassa'
 const passSite = 'AIB789'
 
 
-accedi.addEventListener('click', function(){
+accedi.addEventListener('click', verificaUtente);
 
-  
 
+function checkEnter(event) {
+    if (event.keyCode === 13) {
+      verificaUtente();
+    }
+  }
+
+
+function verificaUtente(){
 
   if (username.value === userSite && password.value === passSite) {
     sessionStorage.setItem('stats', 1);
@@ -21,13 +28,8 @@ accedi.addEventListener('click', function(){
     location.reload();
     
   }
-})
 
-
-
-
-
-
+};
 
 
 
