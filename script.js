@@ -9,9 +9,6 @@ accedi.addEventListener('click', function(){
 
 
   if (username.value === "111" && password.value === "111") {
-
-    console.log(username.value);
-    console.log(password.value);
     sessionStorage.setItem('stats', 1);
     window.location.href = '/dash.html';
   
