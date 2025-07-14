@@ -9,4 +9,4 @@ window.location.href = '/index.html';
         
         
          
-setInterval(function() {location.reload();}, 10000); 
+setInterval(function() {location.reload();}, 120000); 
