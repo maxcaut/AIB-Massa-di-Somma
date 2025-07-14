@@ -107,13 +107,18 @@ h1{
 }
 
 .logo-aib img{
-    margin-top: 27px;
+
     width:250px;
     display: flex;
     border-radius: 50%;
     background-color: white;
     margin:0 auto;
     margin-bottom: 30px;
+}
+
+#logoregione{
+    margin-top: 50px;
+
 }
 
 .container-login h1{
