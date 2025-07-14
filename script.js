@@ -3,7 +3,7 @@ const password = document.querySelector('#password');
 const accedi = document.querySelector('#Accedi-btn');
 
 accedi.addEventListener('click', verificaUtente);
-document.addEventListener('keydown', checkEnter);
+
 
 function checkEnter(event) {
   if (event.key === "Enter") {
