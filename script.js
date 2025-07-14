@@ -17,7 +17,7 @@ accedi.addEventListener('click', function(){
   
   }
   else{
-    console.log("errore");
+    location.reload();
     
   }
 })
