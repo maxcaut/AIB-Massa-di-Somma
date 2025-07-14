@@ -2,6 +2,8 @@ const username = document.querySelector('#username');
 const password = document.querySelector('#password');
 const accedi = document.querySelector('#Accedi-btn');
 
+username.focus();
+
 accedi.addEventListener('click', verificaUtente);
 
 
