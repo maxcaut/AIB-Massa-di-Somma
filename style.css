@@ -57,6 +57,10 @@ img.immagine{
     gap: 8px;
 }
 
+.btn.report{
+    background-color: #4da14d ;
+}
+
 a{
     text-decoration: none;
 }
