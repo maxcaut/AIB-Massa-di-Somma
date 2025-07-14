@@ -107,6 +107,7 @@ h1{
 }
 
 .logo-aib img{
+    margin-top: 27px;
     width:250px;
     display: flex;
     border-radius: 50%;
