@@ -71,8 +71,10 @@ h1{
 
 
 .container-login{
-    max-width: 400px;
-    
+    max-width: 370px;
+    backgroung-color: white;
+    border-radius: 18px;
+    opacity: 25%
     margin: 0 auto;
     text-align: center;
     display:block;
