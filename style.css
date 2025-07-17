@@ -17,6 +17,8 @@ body{
 }
 
 
+
+
 #logout-btn{
     background-color: #60a2ff;
     display:flex ;
@@ -55,6 +57,13 @@ body{
     align-items: center;
     min-height: 10vh;
    
+}
+
+.container-report{
+    display:flex ;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 9px;
 }
 
 
@@ -193,6 +202,11 @@ h1{
         text-align: center;
         
     }
+
+    .container-report{
+    display:block;
+    
+}
 
     
 }
