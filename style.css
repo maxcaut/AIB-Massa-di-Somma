@@ -9,11 +9,42 @@ body{
     min-height: 100vh;
 }
 
+.container-logout{
+    display: flex;
+    justify-content:space-between;
+    margin: 18px;
+    
+}
+
+
+#logout-btn{
+    background-color: #60a2ff;
+    display:flex ;
+    align-items: center;
+}
+
+.gif-icon{
+    height: 30px;
+    margin: 4px;
+    justify-content: center;
+
+    
+   
+}
+
 .image-fire{
     height: 50px;
     margin:9px;
 
 }
+
+#bnt-map{
+    
+    display: flex;
+    width: 50px;
+    
+}
+
 
 .container-pulsanti{
     display: flex;
@@ -35,6 +66,7 @@ button{
     background-color: #ff4d4d;
     text-decoration: none;
     color: white;
+    justify-content: center;
 }
 
 .title-dash{
@@ -137,17 +169,23 @@ h1{
 
 @media (max-width: 650px) {
     .container-pulsanti{
-        max-width: 90vw;
-        display:block;
-        margin: 0 auto;
+        
+        display:flex;
+        flex-wrap: wrap;
         margin-bottom: 18px;
+        gap:8px;
+       
+        
+     
     }
 
-    button{
+    a{
+        width: calc(50% - 4px);
+    }
+    .btn{
+        width:calc(100% - 4px);
         margin: 0 auto;
-        margin-bottom: 5px;
-        width: 100%;
-        justify-content: center;
+       
     }
     
     .title-dash{
@@ -155,4 +193,6 @@ h1{
         text-align: center;
         
     }
+
+    
 }
