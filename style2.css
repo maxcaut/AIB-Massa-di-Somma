@@ -13,7 +13,9 @@ body{
 #lat, #lon {
     width:25%;
 }
-
+label {
+    height:20px;
+}
 
 .page{
     display:flex;
