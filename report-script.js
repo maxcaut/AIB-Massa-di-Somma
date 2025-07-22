@@ -10,7 +10,7 @@ const form = document.getElementById("report-form");
 form.addEventListener("submit", function(e) {
   e.preventDefault(); // evita refresh pagina
 
-  emailjs.sendForm("service_b1workh", "YOUR_TEMPLATE_ID", this)
+  emailjs.sendForm("service_b1workh", "template_iehy0wt", this)
     .then(function() {
       alert("Email inviata con successo!");
       form.reset(); // reset campi form
