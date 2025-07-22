@@ -13,7 +13,7 @@
   <form id="report-form">
     <input type="text" name="user_name" placeholder="Il tuo nome" required><br><br>
     <input type="text" name="user_surname" placeholder="il tuo cognome" required><br><br>
-    <label for="cars">Associazione di appartenenza:</label>
+    <label for="Associazione">Associazione di appartenenza:</label>
       <select name="associazione" id="associazione">
        <option value="G.C. Massa di Somma">G.C. Massa di Somma</option>
        <option value="G.C Cercola">G.C. Cercola</option>
@@ -21,6 +21,12 @@
        <option value="G.C. Sant'Anastasia">G.C. Sant'Anastasia</option>
        <option value="Save Me">Save Me</option>
        <option value="NVPC Pomogliano">NVPC Pomigliano</option>
+      </select>
+      
+      <label for="tipologia squadra">Tipologia Squadra:</label>
+      <select name="tipologiaSquadra" id="tipologiaSquadra">
+       <option value="Pattugliamento">Pattugliamento</option>
+       <option value="Lotta Attiva">Lotta Attiva</option>
       </select>
     <textarea name="message" placeholder="Il tuo messaggio" required></textarea><br><br>
     <button type="submit">Invia</button>
