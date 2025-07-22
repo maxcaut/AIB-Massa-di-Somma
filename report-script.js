@@ -19,3 +19,26 @@ form.addEventListener("submit", function(e) {
       alert("Si è verificato un errore, riprova.");
     });
 });
+
+
+
+
+function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+          function(position) {
+            document.getElementById("lat").value = position.coords.latitude;
+            document.getElementById("lon").value = position.coords.longitude;
+          },
+          function(error) {
+            alert("Errore nel recupero della posizione: " + error.message);
+          }
+        );
+      } else {
+        alert("La geolocalizzazione non è supportata dal tuo browser.");
+      }
+    };
+  
+
+
+
