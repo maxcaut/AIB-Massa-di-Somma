@@ -19,3 +19,9 @@ label{
     margin: 0 auto;
 }
 
+.page{
+    width:calc(100%-20px);
+    
+    
+}
+
