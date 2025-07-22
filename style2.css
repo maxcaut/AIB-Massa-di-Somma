@@ -14,3 +14,7 @@ body{
     width:25%;
 }
 
+label{
+    display:block;
+}
+
