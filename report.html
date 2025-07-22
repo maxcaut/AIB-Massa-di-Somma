@@ -16,115 +16,116 @@
 
 
 <body>
-  <h1>Compila il report dell'incendio</h1>
+  <h1 class="title-page">Compila il report dell'incendio</h1>
   <div class="page">
+    <div class="section-1">
   
-  <form id="report-form">
-    <label for="date">Data:</label>
-    <input type="date" name="date"required><br>
-    <input type="text" name="user_name" placeholder="Il tuo nome" required><br>
-    <input type="text" name="user_surname" placeholder="il tuo cognome" required><br>
-    <label for="Associazione">Associazione di appartenenza:</label><br>
-      <select name="associazione" id="associazione">
-       <option value="-">-</option>
-       <option value="G.C. Massa di Somma">G.C. Massa di Somma</option>
-       <option value="G.C Cercola">G.C. Cercola</option>
-       <option value="Cobra 2">Cobra 2</option>
-       <option value="G.C. Sant'Anastasia">G.C. Sant'Anastasia</option>
-       <option value="Save Me">Save Me</option>
-       <option value="NVPC Pomogliano">NVPC Pomigliano</option>
-      </select><br>
-      
-      <label for="tipologia squadra">Tipologia Squadra:</label><br>
-      <select name="tipologiaSquadra" id="tipologiaSquadra">
-       <option value="Pattugliamento">Pattugliamento</option>
-       <option value="Lotta Attiva">Lotta Attiva</option>
-      </select><br>
-        
-        
-    <label for="lat">Lat.:</label>
-    <input type="text" id="lat" name="lat" readonly required>
+      <form id="report-form">
+        <label for="date">Data:</label>
+        <input type="date" name="date"required><br>
+        <input type="text" name="user_name" id="nome" placeholder="Il tuo nome" required><br>
+        <input type="text" name="user_surname" id="cognome" placeholder="il tuo cognome" required><br>
+        <label for="Associazione">Associazione di appartenenza:</label><br>
+          <select name="associazione" id="associazione">
+          <option value="-">-</option>
+          <option value="G.C. Massa di Somma">G.C. Massa di Somma</option>
+          <option value="G.C Cercola">G.C. Cercola</option>
+          <option value="Cobra 2">Cobra 2</option>
+          <option value="G.C. Sant'Anastasia">G.C. Sant'Anastasia</option>
+          <option value="Save Me">Save Me</option>
+          <option value="NVPC Pomogliano">NVPC Pomigliano</option>
+          </select><br>
+          
+          <label for="tipologia squadra">Tipologia Squadra:</label><br>
+          <select name="tipologiaSquadra" id="tipologiaSquadra">
+          <option value="Pattugliamento">Pattugliamento</option>
+          <option value="Lotta Attiva">Lotta Attiva</option>
+          </select><br>
+    </div>
+          
+    <div class="section-2">     
+        <label for="lat">Lat:</label>
+        <input type="text" id="lat" name="lat" readonly required>
 
-    <label for="lon">Long.:</label>
-    <input type="text" id="lon" name="lon" readonly requires>
+        <label for="lon">Long:</label>
+        <input type="text" id="lon" name="lon" readonly requires>
 
-    <button onclick="getLocation()">📍</button><br>
-      
-    <label for="hhAttivazione">Ora di Attivazione</label>
-    <input type="text" id="hhAttivazione" name="hhAttivazione"  required><br>
-    <label for="hhArrivo">Ora di Arrivo</label>
-    <input type="text" id="hhArrivo" name="hhArrivo"  required><br>
-    <label for="hhFine">Ora Fine Intervento</label>
-    <input type="text" id="hhFine" name="hhFine"  required><br>
-    <label for="hhRientro">Ora di Rientro</label>
-    <input type="text" id="hhRientro" name="hhRientro"  required><br>
-      
-      
-    <label for="segnalazione">Segnalazione ricevuta da:</label><br>
-      <select name="segnalazione" id="segnalazione">
-      <option value="-">-</option>
-       <option value="SOPI">SOPI</option>
-       <option value="SORU">SORU</option>
-       <option value="Cittadino">Cittadino</option>
-       <option value="Altro">Altro</option>
-      </select><br>
-    <textarea name="altro" placeholder="Se altro, Specificate" ></textarea><br>
-    
-    <label for="tipoIntervento">Tipo di intervento:</label><br>
-      <select name="tipoIntevento" id="tipoIntervento">
-       <option value="-">-</option>
-       <option value="Boschivo">Boschivo</option>
-       <option value="Sterpaglie">Sterpaglie</option>
-       <option value="Interfaccia">Interfaccia</option>
-       </select><br>
-      
-    <label for="indirizzo">Indirizzo dell incendio:</label>
-    <input type="text" id="indirizzo" name="indirizzo"  required><br>
-      
-      
-    <label for="ettari">Ettari Bruciati</label>
-    <input type="text" id="ettari" name="ettari"  required><br>
-      
-    
-    <label for="superfici">Siperfici Percorse dal Fuoco</label>
-    <label for="ceduo">Ceduo:</label><br>
-      <select name="ceduo" id="ceduo">
-      <option value="-">-</option>
-       <option value="Matricinato">Matricinato</option>
-       <option value="Composto">Composto</option>
-       <option value="Degradato">Degradato</option>
-       <option value="Macchia Mediterranea ">Macchia Mediterranea </option>
-       </select><br>
-      
-      
-    <label for="altoFusto">Alto Fusto:</label><br>
-      <select name="altoFusto" id="altoFusto">
-       <option value="-">-</option>
-       <option value="Resiniso">Resinoso</option>
-       <option value="Latifoglie">Latifoglie</option>
-       <option value="Misto">Misto</option>
-       <option value="Rimboschimento">Rimboschimento</option>
-       </select><br>
-      
-    <label for="nonBoscato">Non Boscato:</label><br>
-      <select name="nonBoscato" id="nonBoscato">
-       <option value="-">-</option>
-       <option value="Cespugliato">Cespugliato</option>
-       <option value="Pascolo">Pascolo</option>
-       <option value="Seminato">Seminato</option>
-       <option value="Incolto">Incolto</option>
-       </select><br>
+        <button id="getLocation" onclick="getLocation()">📍</button><br>
+          
+        <label for="hhAttivazione">Ora di Attivazione</label>
+        <input type="text" id="hhAttivazione" name="hhAttivazione" placeholder="HH:MM" required><br>
+        <label for="hhArrivo">Ora di Arrivo</label>
+        <input type="text" id="hhArrivo" name="hhArrivo"placeholder="HH:MM" required><br>
+        <label for="hhFine">Ora Fine Intervento</label>
+        <input type="text" id="hhFine" name="hhFine" placeholder="HH:MM" required><br>
+        <label for="hhRientro">Ora di Rientro</label>
+        <input type="text" id="hhRientro" name="hhRientro" placeholder="HH:MM" required><br>
+          
+          
+        <label for="segnalazione">Segnalazione ricevuta da:</label><br>
+          <select name="segnalazione" id="segnalazione">
+          <option value="-">-</option>
+          <option value="SOPI">SOPI</option>
+          <option value="SORU">SORU</option>
+          <option value="Cittadino">Cittadino</option>
+          <option value="Altro">Altro</option>
+          </select><br>
+        <textarea name="altro" placeholder="Se altro, Specificate" ></textarea><br>
         
+        <label for="tipoIntervento">Tipo di intervento:</label><br>
+          <select name="tipoIntevento" id="tipoIntervento">
+          <option value="-">-</option>
+          <option value="Boschivo">Boschivo</option>
+          <option value="Sterpaglie">Sterpaglie</option>
+          <option value="Interfaccia">Interfaccia</option>
+          </select><br>
+          
+        <label for="indirizzo">Indirizzo dell incendio:</label>
+        <input type="text" id="indirizzo" name="indirizzo" placeholder="Via, civico, comune , provincia" required><br>
+          
+          
+        <label for="ettari">Ettari Bruciati</label>
+        <input type="text" id="ettari" name="ettari" placeholder="Ha" required><br>
+          
         
-    <label for="automezzo">Automezzo Utilizzato:</label>
-    <input type="text" id="automezzo" name="automezzo" placeholder="Modello e targa"  requires><br>
-      
-    <label for="note">note:</label>
-    <textarea id="note" name="note" placeholder="Eventuali note qui .."  ></textarea>
-        
-    
-    <button type="submit">Invia</button>
-  </form>
+        <label for="superfici">Siperfici Percorse dal Fuoco</label>
+        <label for="ceduo">Ceduo:</label><br>
+          <select name="ceduo" id="ceduo">
+          <option value="-">-</option>
+          <option value="Matricinato">Matricinato</option>
+          <option value="Composto">Composto</option>
+          <option value="Degradato">Degradato</option>
+          <option value="Macchia Mediterranea ">Macchia Mediterranea </option>
+          </select><br>
+          
+          
+        <label for="altoFusto">Alto Fusto:</label><br>
+          <select name="altoFusto" id="altoFusto">
+          <option value="-">-</option>
+          <option value="Resiniso">Resinoso</option>
+          <option value="Latifoglie">Latifoglie</option>
+          <option value="Misto">Misto</option>
+          <option value="Rimboschimento">Rimboschimento</option>
+          </select><br>
+          
+        <label for="nonBoscato">Non Boscato:</label><br>
+          <select name="nonBoscato" id="nonBoscato">
+          <option value="-">-</option>
+          <option value="Cespugliato">Cespugliato</option>
+          <option value="Pascolo">Pascolo</option>
+          <option value="Seminato">Seminato</option>
+          <option value="Incolto">Incolto</option>
+          </select><br>
+            
+            
+        <label for="automezzo">Automezzo Utilizzato:</label>
+        <input type="text" id="automezzo" name="automezzo" placeholder="Modello e targa"  requires><br>
+          
+        <label for="note">Note:</label><br>
+        <textarea id="note" name="note" placeholder="Eventuali note qui .."  ></textarea>
+    </div>
+      <button type="submit" id="bottoneInvia">Invia</button>
+    </form>
   </div>
 
   <!-- Importa la libreria di EmailJS -->

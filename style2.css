@@ -7,22 +7,93 @@
 body{
     background-image: linear-gradient(#60a2ff, #94c1ff);
     min-height: 100vh;
-    
+    font-size: 20px;
+
+}
+
+.title-page{
+    text-align: center;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.section-1, .section-2{
+    background-color: rgba(255, 255, 255, 0.4) ;  /* togliere questa */
+    border-radius: 18px;
+    padding:18px;
+    margin-bottom: 9px;
 }
 
 #lat, #lon {
     width:25%;
 }
-input {
+input{
     padding:9px;
+    margin:9px 0px;
+    border-radius: 9px;
+    border: none;
+    
+}
+select{
+    width:100%;
+    margin: 9px 0px;
+    font-size: 25px;
 }
 
 .page{
-    display:flex;
-    width:calc(100%-20px);
-    text-align:center;
+    max-width: 400px;
+    border-radius: 18px;
+    
+    padding:18px;
+    margin: 0 auto;
+    text-align: center;
+    display:block;
+    width: 100%;
+    align-items: center;
     
     
     
 }
+
+
+#bottoneInvia{
+    display:block;
+    padding: 18px;
+    font-size: 20px;
+    border-radius: 18px;
+    border: none;
+    background-color: #ff4d4d;
+    text-decoration: none;
+    color: white;
+    width: 100%;
+    margin-top: 9px;
+    
+
+}
+
+#indirizzo, #automezzo, #nome, #cognome{
+    width: 100%;
+}
+
+textarea{
+    width: 100%;
+    height: 10vh;
+    border-radius: 9px;
+    padding: 9px;
+    border: none;
+    resize: none;
+}
+
+#getLocation{
+    width: 35px;
+    height: 35px;
+    border-radius: 9px;
+    border: none;
+    background-color: rgba(255, 255, 255, 0.4) ;
+}
+
+#note{
+    margin-top:9px;
+}
+
 
