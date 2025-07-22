@@ -44,6 +44,10 @@ select{
     font-size: 22px;
 }
 
+#date{
+    width: calc(100%-30px);
+}
+
 
 
 .page{
