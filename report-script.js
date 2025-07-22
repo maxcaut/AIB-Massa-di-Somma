@@ -1,3 +1,25 @@
+// controlla se loggato
+const stats = sessionStorage.getItem('stats');
+console.log(stats);
+
+if (stats !== '1') {
+window.location.href = '/index.html';
+    
+    
+} ;
+
+// ritora home bottone
+const bottoneritornohome = document.querySelector('#bottoneRitorno');
+bottoneritornohome.addEventListener('click', ritornaHome);
+
+function ritornaHome(){
+  window.location.href = '/dash.html';
+};
+
+
+
+
+
 // Inizializza EmailJS con la tua Public Key
 (function() {
   emailjs.init("MmdNo-DzYkKtf7JBh"); // Sostituisci con la tua chiave pubblica
