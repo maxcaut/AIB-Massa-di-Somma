@@ -35,7 +35,7 @@ input{
     border: none;
     width: 100%;
     
-    font-size: 25px;
+    font-size: 22px;
     
 }
 select{
@@ -88,7 +88,7 @@ textarea{
     padding: 18px;
     border: none;
     resize: none;
-    font-size: 25px;
+    font-size: 22px;
 }
 
 #getLocation{
