@@ -18,7 +18,7 @@ body{
 .page{
     display:flex;
     width:calc(100%-20px);
-    justify-content: center;
+    text-align:center;
     
     
     
