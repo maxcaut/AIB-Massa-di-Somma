@@ -15,7 +15,7 @@ body{
 }
 
 label{
-    display:block;
+    display:flexbox;
     margin: 0 auto;
 }
 
