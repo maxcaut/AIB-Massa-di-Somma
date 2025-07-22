@@ -15,11 +15,12 @@ body{
 }
 
 label{
-    display:flexbox;
+    
     margin: 0 auto;
 }
 
 .page{
+    display:flex;
     width:calc(100%-20px);
     
     
