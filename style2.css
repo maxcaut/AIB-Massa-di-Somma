@@ -44,7 +44,11 @@ select{
 }
 
 #date{
-    width: calc(100%-30px);
+    width: 50%;
+    display:block;
+    margin: 0 auto;
+    margin-bottom: -9px;
+    margin-top: 9px;
 }
 
 
