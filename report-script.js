@@ -1,6 +1,6 @@
 // Inizializza EmailJS con la tua Public Key
 (function() {
-  emailjs.init("YOUR_PUBLIC_KEY"); // Sostituisci con la tua chiave pubblica
+  emailjs.init("MmdNo-DzYkKtf7JBh"); // Sostituisci con la tua chiave pubblica
 })();
 
 // Seleziona il form
@@ -10,7 +10,7 @@ const form = document.getElementById("report-form");
 form.addEventListener("submit", function(e) {
   e.preventDefault(); // evita refresh pagina
 
-  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+  emailjs.sendForm("service_b1workh", "YOUR_TEMPLATE_ID", this)
     .then(function() {
       alert("Email inviata con successo!");
       form.reset(); // reset campi form
