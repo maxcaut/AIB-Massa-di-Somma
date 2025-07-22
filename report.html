@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Report Incendio</title>
+</head>
+
+
+<body>
+    
+  <h1>Compila il report dell'incendio</h1>
+  <form id="report-form">
+    <input type="text" name="user_name" placeholder="Il tuo nome" required><br><br>
+    <input type="text" name="user_surname" placeholder="il tuo cognome" required><br><br>
+    <textarea name="message" placeholder="Il tuo messaggio" required></textarea><br><br>
+    <button type="submit">Invia</button>
+  </form>
+
+  <!-- Importa la libreria di EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <!-- Importa il tuo script -->
+  <script src="script-report.js"></script>
+</body>
+</html>
