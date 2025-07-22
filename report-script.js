@@ -36,6 +36,7 @@ form.addEventListener("submit", function(e) {
     .then(function() {
       alert("Email inviata con successo!");
       form.reset(); // reset campi form
+      window.location.href = '/dash.html';
     }, function(error) {
       console.log("Errore nell'invio:", error);
       alert("Si è verificato un errore, riprova.");
