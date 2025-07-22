@@ -4,7 +4,7 @@
 })();
 
 // Seleziona il form
-const form = document.getElementById("#report-form");
+const form = document.querySelector("#report-form");
 
 // Aggiungi evento di submit
 form.addEventListener("submit", function(e) {
