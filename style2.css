@@ -33,6 +33,7 @@ input{
     margin:9px 0px;
     border-radius: 9px;
     border: none;
+    width: 100%;
     
 }
 select{
