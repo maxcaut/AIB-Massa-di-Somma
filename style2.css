@@ -18,6 +18,8 @@ body{
 .page{
     display:flex;
     width:calc(100%-20px);
+    align-items:center;
+    text-align:center;
     
     
 }
