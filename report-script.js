@@ -34,7 +34,7 @@ form.addEventListener("submit", function(e) {
 
   emailjs.sendForm("service_b1workh", "template_iehy0wt", this)
     .then(function() {
-      alert("Email inviata con successo!");
+      alert("Report Inviato con successo!");
       form.reset(); // reset campi form
       window.location.href = '/dash.html';
     }, function(error) {
@@ -46,21 +46,42 @@ form.addEventListener("submit", function(e) {
 
 
 
-function getLocation() {
-      if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(
-          function(position) {
-            document.getElementById("lat").value = position.coords.latitude;
-            document.getElementById("lon").value = position.coords.longitude;
-          },
-          function(error) {
-            alert("Errore nel recupero della posizione: " + error.message);
+document.addEventListener("DOMContentLoaded", function() {
+  const btn = document.getElementById("getLocation");
+  btn.addEventListener("click", function(event) {
+    event.preventDefault();
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        function(position) {
+          document.getElementById("lat").value = position.coords.latitude;
+          document.getElementById("lon").value = position.coords.longitude;
+        },
+        function(error) {
+          let message = "";
+          switch (error.code) {
+            case error.PERMISSION_DENIED:
+              message = "Permesso di geolocalizzazione negato.";
+              break;
+            case error.POSITION_UNAVAILABLE:
+              message = "Informazioni sulla posizione non disponibili.";
+              break;
+            case error.TIMEOUT:
+              message = "Tempo scaduto per ottenere la posizione.";
+              break;
+            default:
+              message = "Errore sconosciuto.";
           }
-        );
-      } else {
-        alert("La geolocalizzazione non è supportata dal tuo browser.");
-      }
-    };
+          alert("Errore nel recupero della posizione: " + message);
+        }
+      );
+    } else {
+      alert("La geolocalizzazione non è supportata dal tuo browser.");
+    }
+  });
+});
+
+
+
   
 
 
