@@ -1,5 +1,6 @@
 const stats = sessionStorage.getItem('stats');
-console.log(stats);
+const username = sessionStorage.getItem('username');
+
 
 if (stats !== '1') {
 window.location.href = '/index.html';

@@ -23,6 +23,7 @@ async function verificaUtente() {
 
     if (utenteValido) {
       sessionStorage.setItem('stats', 1);
+      sessionStorage.setItem('username', username.value);
 
       // prima registra log, poi redirect
       registraLog(username.value)
