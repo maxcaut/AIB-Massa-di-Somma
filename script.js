@@ -6,7 +6,6 @@ username.focus();
 
 accedi.addEventListener('click', verificaUtente);
 
-
 function checkEnter(event) {
   if (event.key === "Enter") {
     verificaUtente();
@@ -24,7 +23,13 @@ async function verificaUtente() {
 
     if (utenteValido) {
       sessionStorage.setItem('stats', 1);
-      window.location.href = '/dash.html';
+
+      // prima registra log, poi redirect
+      registraLog(username.value)
+        .finally(() => {
+          window.location.href = '/dash.html';
+        });
+
     } else {
       alert("Username o Password Errati");
       location.reload();
@@ -33,4 +38,19 @@ async function verificaUtente() {
     console.error("Errore nel caricamento utenti.json", err);
     alert("Errore interno");
   }
+}
+
+function registraLog(user) {
+  const logData = {
+    username: user,
+    time: new Date().toISOString()
+  };
+  return fetch('https://usebasin.com/f/6d0f1a17b962', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(logData)
+  })
+  .then(res => res.text())
+  .then(txt => console.log('✅ Log inviato:', txt))
+  .catch(err => console.error('❌ Errore invio log:', err));
 }
