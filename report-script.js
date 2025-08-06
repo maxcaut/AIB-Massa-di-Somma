@@ -36,6 +36,12 @@ const form = document.querySelector("#report-form");
 form.addEventListener("submit", function(e) {
   e.preventDefault(); // evita refresh pagina
 
+// Disabilita il bottone submit
+  const submitButton = form.querySelector('button[type="submit"]');
+  submitButton.disabled = true;
+  submitButton.textContent = "Invio in corso...";
+
+
   emailjs.sendForm("service_b1workh", "template_iehy0wt", this)
     .then(function() {
       alert("Report Inviato con successo!");
