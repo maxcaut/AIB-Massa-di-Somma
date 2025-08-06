@@ -1,16 +1,12 @@
 // controlla se loggato
 const stats = sessionStorage.getItem('stats');
-const username = sessionStorage.getItem('username');
-
+console.log(stats);
 
 if (stats !== '1') {
 window.location.href = '/index.html';
     
     
 } ;
-
-
-document.getElementById("username").value = username;
 
 // ritora home bottone
 const bottoneritornohome = document.querySelector('#bottoneRitorno');
@@ -32,11 +28,9 @@ function ritornaHome(){
 // Seleziona il form
 const form = document.querySelector("#report-form");
 
-
 // Aggiungi evento di submit
 form.addEventListener("submit", function(e) {
   e.preventDefault(); // evita refresh pagina
-
 
   emailjs.sendForm("service_b1workh", "template_iehy0wt", this)
     .then(function() {
