@@ -27,15 +27,24 @@ function ritornaHome(){
 
 // Seleziona il form
 const form = document.querySelector("#report-form");
+const sbmbtn = document.querySelector("#bottoneInvia");
+
 
 // Aggiungi evento di submit
 form.addEventListener("submit", function(e) {
   e.preventDefault(); // evita refresh pagina
+  sbmbtn.disabled = true;
+  sbmbtn.textContent = "Invio in corso..";
+
 
   emailjs.sendForm("service_b1workh", "template_iehy0wt", this)
     .then(function() {
       alert("Report Inviato con successo!");
       form.reset(); // reset campi form
+      
+      sbmbtn.disabled = false;
+      sbmbtn.textContent = "Invia";
+
       window.location.href = '/dash.html';
     }, function(error) {
       console.log("Errore nell'invio:", error);
