@@ -20,7 +20,7 @@
   <div class="page">
     <div class="section-1">
   
-      <form id="report-form" method="POST" data-netlify="true" netlify enctype="multipart/form-data">
+      <form id="report-form">
         <input type="hidden" name="username" id="username" readonly ><br>
         <label for="date">Data:</label>
         <input id="date" type="date" name="date"required ><br>
@@ -124,11 +124,6 @@
           
         <label for="note">Note:</label><br>
         <textarea id="note" name="note" placeholder="Eventuali note qui .."  ></textarea>
-
-        <label for="all1">Inserire allegati: (max 2)</label>
-        <input type="file" id="all1" name="all1"  >
-        <input type="file" id="all2" name="all2"  >
-
     </div>
       <button type="submit" id="bottoneInvia" class="bottone">Invia</button>
     </form>
@@ -140,7 +135,7 @@
 
   <!-- Importa la libreria di EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <!-- Importa il tuo script 
-  <script src="report-script.js"></script>-->
+  <!-- Importa il tuo script -->
+  <script src="report-script.js"></script>
 </body>
 </html>
