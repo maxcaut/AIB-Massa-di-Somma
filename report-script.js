@@ -31,16 +31,11 @@ function ritornaHome(){
 
 // Seleziona il form
 const form = document.querySelector("#report-form");
-const submitButton = document.getElementById("#bottoneInvia");
+
 
 // Aggiungi evento di submit
 form.addEventListener("submit", function(e) {
   e.preventDefault(); // evita refresh pagina
-
-// Disabilita il bottone submit
-  
-  submitButton.disabled = true;
-  submitButton.textContent = "Invio in corso...";
 
 
   emailjs.sendForm("service_b1workh", "template_iehy0wt", this)
